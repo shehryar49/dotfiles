@@ -1,100 +1,52 @@
-* {
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+*{
+    font-family: JetBrainsMono;
     font-size: 13px;
+    min-height: 0;
+    color: white;
 }
 
-#waybar {
+window#waybar {
     background-color: #333333;
-    color: #ffffff;
 }
 
-button {
-    box-shadow: inset 0 -3px transparent;
-    border: none;
-    border-radius: 0;
-    padding: 0 5px;
+#workspaces{
+    margin-top: 3px;
+    margin-bottom: 2px;
+    margin-right: 10px;
+    margin-left: 15px;
 }
 
-#workspaces button {
+#workspaces button{
+
+    margin-right: 10px;
+    padding: 1px 5px;
+    font-weight: bolder;
     background-color: #333333;
-    color: #ffffff;
+    color: white;
 }
 
-#workspaces button:hover {
-    background: rgba(0,0,0,0.2);
+#workspaces button.active, #workspaces button.focused{
+    padding: 0 15px;
+    background-color: #00308F;
+    
 }
 
-#workspaces button.focused {
-    background-color: #285577;
-}
-
-#workspaces button.urgent {
-    background-color: #900000;
-}
-
-#workspaces button.active {
-    background-color: #006A4E;
-}
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#pulseaudio,
 #tray,
-#mode,
-#idle_inhibitor,
-#window,
-#workspaces {
-    margin: 0 5px;
+#mpd,
+#custom-weather,
+#cpu, 
+#temperature, 
+#memory,
+#sway-mode,
+#backlight, 
+#pulseaudio, 
+#custom-vpn,
+#disk,
+#custom-recorder,
+#custom-audiorec,
+#battery, 
+#clock, 
+#network {
+	padding: 0 10px;
 }
 
-
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
-}
-
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-label:focus {
-    background-color: #000000;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
-}
-
-#idle_inhibitor {
-    font-size: 15px;
-    background-color: #333333;
-    padding: 5px;
-}
-
-#idle_inhibitor.activated {
-    background-color: #285577;
-}
