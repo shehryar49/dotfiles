@@ -1,0 +1,25 @@
+theme = "onedark"
+
+[editor]
+mouse = false
+auto-completion = true
+bufferline = "always"
+indent-heuristic = "simple"
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+enable = true
+auto-signature-help = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
