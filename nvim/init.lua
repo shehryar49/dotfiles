@@ -1,4 +1,3 @@
-local opt = vim.opt
-vim.wo.number = true
-opt.autoindent = true
-opt.shiftwidth = 4
+require("thegentleman.settings")
+require("thegentleman.maps")
+require("thegentleman.lazy")
