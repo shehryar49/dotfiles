@@ -11,7 +11,8 @@ return {
             automatic_installation = true,
             ensure_installed = {
                 "jsonls",
-                "pyright"
+                "pyright",
+                "clangd"
             },
         })
 
@@ -23,6 +24,7 @@ return {
                 "black", -- python formatter
                 "pylint",
                 "eslint_d",
+                "clangd"
             },
         })
     end,
