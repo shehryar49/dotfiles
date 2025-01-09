@@ -15,4 +15,7 @@ o.encoding = "UTF-8" -- Sets the character encoding used inside Vim.
 o.mouse = "a" -- Enable the use of the mouse. "a" you can use on all modes
 o.title = true -- When on, the title of the window will be set to the value of 'titlestring'
 o.wildmenu = true -- When 'wildmenu' is on, command-line completion operates in an enhanced mode.
-
+o.foldcolumn = '1' -- '0' is not bad
+o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+o.foldlevelstart = 99
+o.foldenable = true
