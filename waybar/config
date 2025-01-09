@@ -15,7 +15,11 @@
     "format": "{capacity}%-{power:.1f}W {time}",
     "format-charging": "{capacity}%+{power:.1f}W",
     "format-plugged": "Plugged {capacity}%+{power:.1f}W",
-    "tooltip": false
+    "tooltip": false,
+	"states": {
+		"warning": 30,
+		"critical": 20
+	}
 },
 "hyprland/workspaces": {
      "sort-by-name": true,
