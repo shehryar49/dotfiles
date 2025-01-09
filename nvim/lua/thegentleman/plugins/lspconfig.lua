@@ -7,40 +7,21 @@ return {
     },
     config = function()
         local nvim_lsp = require("lspconfig")
-        local mason_lspconfig = require("mason-lspconfig")
-
         local protocol = require("vim.lsp.protocol")
 
         local on_attach = function(client, bufnr)
            
         end
-
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-        mason_lspconfig.setup_handlers({
-            function(server)
-                nvim_lsp[server].setup({
-                    capabilities = capabilities,
-                })
-            end,
-            ["jsonls"] = function()
-                nvim_lsp["jsonls"].setup({
-                    on_attach = on_attach,
-                    capabilities = capabilities,
-                })
-            end,
-            ["pyright"] = function()
-                nvim_lsp["pyright"].setup({
-                    on_attach = on_attach,
-                    capabilities = capabilities,
-                })
-            end,
-            ["clangd"] = function()
-                nvim_lsp["clangd"].setup({
-                    on_attach = on_attach,
-                    capabilities = capabilities
-                })
-            end
+        
+        nvim_lsp["pyright"].setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
         })
+        nvim_lsp["clangd"].setup({
+            on_attach = on_attach,
+            capabilities = capabilities
+        })
+            
     end,
 }
