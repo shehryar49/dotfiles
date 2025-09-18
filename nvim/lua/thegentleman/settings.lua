@@ -4,7 +4,6 @@ local o = vim.opt
 -- Editor options
 
 o.number = true -- Print the line number in front of each line
-o.clipboard = "unnamed"
 o.syntax = "on" -- When this option is set, the syntax with this name is loaded.
 o.autoindent = true -- Copy indent from current line when starting a new line.
 o.cursorline = true -- Highlight the screen line of the cursor with CursorLine.
@@ -19,3 +18,8 @@ o.foldcolumn = '1' -- '0' is not bad
 o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 o.foldlevelstart = 99
 o.foldenable = true
+o.clipboard = "unnamedplus"
+
+vim.diagnostic.config({ virtual_text = false })
+vim.keymap.set("n", "<space>d", ":lua vim.diagnostic.open_float(0, {scope='line'})<CR>", { desc = "Show line diagnostics" })
+--vim.api.nvim_buf_set_option('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>' { noremap=true, silent=true })
