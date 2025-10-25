@@ -2,7 +2,7 @@ local global = vim.g
 local o = vim.opt
 
 -- Editor options
-
+o.fixendofline = false
 o.number = true -- Print the line number in front of each line
 o.syntax = "on" -- When this option is set, the syntax with this name is loaded.
 o.autoindent = true -- Copy indent from current line when starting a new line.

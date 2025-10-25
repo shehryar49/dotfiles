@@ -42,7 +42,7 @@
     "format-alt": " {:%a,%b %d}" // Icon: calendar-alt
 },
 "cpu": {
-    "format": "&#8239;{usage}%",
+    "format": " &#8239;{usage}%",
     "tooltip": false,
     "on-click": "kitty -e 'htop'"
 },
@@ -82,7 +82,7 @@
 },
 "pulseaudio": {
   // "scroll-step": 1, // %, can be a float
-  "format": "{icon} {volume}% {format_source}",
+  "format": "{icon}  {volume}% {format_source}",
   "format-bluetooth": "{icon} {volume}% {format_source}",
   "format-bluetooth-muted": " {format_source}",
   "format-muted": "  {format_source}",
