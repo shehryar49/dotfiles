@@ -1,52 +1,66 @@
-*{
-    font-family: JetBrainsMono;
-    font-size: 15px;
+* {
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-size: 12px;
     min-height: 0;
-    color: white;
 }
 
 window#waybar {
-    background-color: #333333;
+    background: rgba(15, 15, 15, 0.96);
+    color: #c5c5c5;
 }
 
-#workspaces{
-    margin-top: 3px;
-    margin-bottom: 2px;
-    margin-right: 10px;
-    margin-left: 15px;
+/* Workspaces */
+#workspaces {
+    margin-left: 8px;
 }
 
-#workspaces button{
-
-    margin-right: 10px;
-    padding: 1px 5px;
-    font-weight: bolder;
-    background-color: #333333;
-    color: white;
+#workspaces button {
+    padding: 0 8px;
+    background: transparent;
+    color: #c5c5c5;
 }
 
-#workspaces button.active, #workspaces button.focused{
-    padding: 0 15px;
+#workspaces button.active , #workspaces button.focused {
+    color: #ffffff;
+    padding: 0 8px;
     background-color: #00308F;
-    
 }
 
-#tray,
-#mpd,
-#custom-weather,
-#cpu, 
-#temperature, 
+/*#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.05);
+}*/
+
+/* Center clock */
+#clock {
+    font-weight: 500;
+    color: #d0d0d0;
+}
+
+/* Right modules */
+#cpu,
 #memory,
-#sway-mode,
-#backlight, 
-#pulseaudio, 
-#custom-vpn,
-#disk,
-#custom-recorder,
-#custom-audiorec,
-#battery, 
-#clock, 
-#network {
-	padding: 0 10px;
+#network,
+#pulseaudio {
+    padding: 0 10px;
+}
+
+/* Muted states */
+#pulseaudio.muted {
+    color: #666666;
+}
+#battery {
+    padding: 0 10px;
+}
+
+#battery.charging {
+    color: #c5c5c5;
+}
+
+#battery.critical {
+    color: #ff5555;
+}
+#battery > label {
+    font-size: 14px;
+    margin-top: 1px;
 }
 

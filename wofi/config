@@ -1,9 +1,9 @@
 [config]
 allow_images=true
-width=500
+width=400
 show=drun
 prompt=Search
-height=400
+height=250
 term=alacritty
 hide_scroll=true
 print_command=true
